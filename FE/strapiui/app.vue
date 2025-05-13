@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
-  </div>
+  <v-container>
+    <v-btn color="primary">Hello Vuetify</v-btn>
+  </v-container>
 </template>
