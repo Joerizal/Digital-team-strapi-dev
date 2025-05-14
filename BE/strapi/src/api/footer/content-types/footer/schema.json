@@ -22,7 +22,9 @@
       "component": "shared.link"
     },
     "Copyright": {
-      "type": "string"
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.repeatable-text"
     }
   }
 }

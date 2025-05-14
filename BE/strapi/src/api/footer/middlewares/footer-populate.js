@@ -14,12 +14,13 @@ module.exports = (config, { strapi }) => {
       },
       Link: {
         populate: {
-          Links: {
-            // populate: {
-            //   // Header: true,
-            //   // Link: true,
-            // },
-          },
+          Links: true,
+        },
+      },
+
+      Copyright: {
+        populate: {
+          fields: ["Header"],
         },
       },
     };
