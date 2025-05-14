@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_header_logo_link_headers",
+  "info": {
+    "displayName": "LinkHeader",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "href": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "enum": {
+      "type": "enumeration",
+      "enum": [
+        "SERVICES OVERVIEW",
+        "UI/UX DESIGN",
+        "WEB EXPERIENCE",
+        "BRAND STRATEGY",
+        "VIDEO STORYTELLING",
+        "DIGITAL MARKETING"
+      ]
+    },
+    "linkEnum": {
+      "type": "enumeration",
+      "enum": [
+        "/servicesoverview",
+        "/uiuxdesign",
+        "/webexperience",
+        "/brandstrategy",
+        "/videostorytelling",
+        "/digitalmarketing"
+      ]
+    },
+    "isSelected": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
