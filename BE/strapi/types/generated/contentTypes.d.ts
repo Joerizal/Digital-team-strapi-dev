@@ -518,7 +518,7 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
-    Copyright: Schema.Attribute.String;
+    Copyright: Schema.Attribute.Component<'shared.repeatable-text', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
