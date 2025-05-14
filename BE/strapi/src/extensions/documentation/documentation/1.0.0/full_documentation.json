@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-05-14T05:31:17.297Z"
+    "x-generation-date": "2025-05-14T08:06:04.035Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -10648,6 +10648,20 @@
           }
         }
       },
+      "HeaderLogoLinkServicesComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "href": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          }
+        }
+      },
       "HeaderLogoLinkHeaderComponent": {
         "type": "object",
         "properties": {
@@ -10660,30 +10674,14 @@
           "label": {
             "type": "string"
           },
-          "enum": {
-            "type": "string",
-            "enum": [
-              "SERVICES OVERVIEW",
-              "UI/UX DESIGN",
-              "WEB EXPERIENCE",
-              "BRAND STRATEGY",
-              "VIDEO STORYTELLING",
-              "DIGITAL MARKETING"
-            ]
-          },
-          "linkEnum": {
-            "type": "string",
-            "enum": [
-              "/servicesoverview",
-              "/uiuxdesign",
-              "/webexperience",
-              "/brandstrategy",
-              "/videostorytelling",
-              "/digitalmarketing"
-            ]
-          },
           "isSelected": {
             "type": "boolean"
+          },
+          "linkServices": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/HeaderLogoLinkServicesComponent"
+            }
           }
         }
       },

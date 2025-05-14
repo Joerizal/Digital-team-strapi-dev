@@ -3,10 +3,12 @@ import "/assets/styles/main.scss";
 </script>
 
 <template>
-  <div>
+  <div class="main-wrapper">
+    <AppHeader />
     <div>
       <slot />
     </div>
+    <!-- <AppFooter /> -->
     <AppFooter />
   </div>
 </template>

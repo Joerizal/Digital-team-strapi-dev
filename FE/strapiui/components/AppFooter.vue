@@ -13,6 +13,13 @@ const footerBgUrl = computed(() => {
   )?.Image[0]?.url;
   return footerBg ? `${config.public.strapiUrl}${footerBg}` : "";
 });
+
+const seetruLogoUrl = computed(() => {
+  const seetrulogo = data.value?.data?.Logo?.find(
+    (logo) => logo.Title === "Seetru Logo"
+  )?.Image[0]?.url;
+  return seetrulogo ? `${config.public.strapiUrl}${seetrulogo}` : "";
+});
 </script>
 
 <template>
@@ -63,24 +70,16 @@ const footerBgUrl = computed(() => {
               md="4"
               class="d-flex flex-column align-center align-md-start"
             >
-              <h3 class="text-h6 font-weight-bold mb-4">
-                <template v-if="data?.data?.Logo">
-                  <v-img
-                    v-if="logo?.Title === 'Seetru Logo'"
-                    :key="logo.id"
-                    :src="logo.Image?.[0]?.url"
-                    alt="Seetru Logo"
-                    max-width="200"
-                  />
-                </template>
-              </h3>
+              <div class="pb-10">
+                <v-img :src="seetruLogoUrl" :width="177" :height="88"> </v-img>
+              </div>
+
+              <!-- <h3 class="text-h6 font-weight-bold mb-4"></h3> -->
               <div class="d-flex gap-4">
                 <v-btn
                   v-for="socialLogo in data?.data?.Logo?.filter(
                     (logo) =>
-                      logo.Title.includes('logo') &&
-                      logo.Title !== 'Seetru Logo' &&
-                      logo.Title !== 'Footer Bg'
+                      logo.Title !== 'Seetru Logo' && logo.Title !== 'Footer Bg'
                   )"
                   :key="socialLogo.id"
                   :href="socialLogo.isLink ? '#' : undefined"
@@ -102,9 +101,9 @@ const footerBgUrl = computed(() => {
           </v-row>
 
           <!-- Copyright section -->
-          <v-divider class="mt-8 border-opacity-25" color="white"></v-divider>
-          <div class="text-center mt-4">
-            <span class="text-white text-body-2">
+          <!-- <v-divider class="mt-8 border-opacity-25" color="white"></v-divider> -->
+          <div class="footer-gradient mt-8" cover height="" width="100%">
+            <span class="font-A3A3A3 font 14-400">
               {{ data?.data?.Copyright?.Header }}
             </span>
           </div>
@@ -113,3 +112,9 @@ const footerBgUrl = computed(() => {
     </v-img>
   </v-footer>
 </template>
+
+<style scoped>
+.footer-gradient {
+  background: linear-gradient(to bottom, #333333, #333333);
+}
+</style>
