@@ -1,11 +1,15 @@
 {
   "collectionName": "components_shared_repeatable_texts",
   "info": {
-    "displayName": "Repeatable text"
+    "displayName": "Repeatable text",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "text": {
+    "Header": {
+      "type": "text"
+    },
+    "Link": {
       "type": "text"
     }
   }

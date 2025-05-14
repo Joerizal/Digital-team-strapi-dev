@@ -79,7 +79,7 @@ export interface SharedLink extends Struct.ComponentSchema {
   attributes: {
     Header: Schema.Attribute.String;
     isLink: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
-    link: Schema.Attribute.Component<'shared.repeatable-text', true>;
+    Links: Schema.Attribute.Component<'shared.repeatable-text', true>;
   };
 }
 
@@ -121,10 +121,12 @@ export interface SharedQuote extends Struct.ComponentSchema {
 export interface SharedRepeatableText extends Struct.ComponentSchema {
   collectionName: 'components_shared_repeatable_texts';
   info: {
+    description: '';
     displayName: 'Repeatable text';
   };
   attributes: {
-    text: Schema.Attribute.Text;
+    Header: Schema.Attribute.Text;
+    Link: Schema.Attribute.Text;
   };
 }
 

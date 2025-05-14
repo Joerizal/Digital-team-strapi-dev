@@ -13,7 +13,7 @@
       "type": "boolean",
       "default": true
     },
-    "link": {
+    "Links": {
       "type": "component",
       "repeatable": true,
       "component": "shared.repeatable-text"
