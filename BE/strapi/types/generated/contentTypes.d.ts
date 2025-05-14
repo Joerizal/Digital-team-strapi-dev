@@ -572,12 +572,13 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
 export interface ApiHeaderHeader extends Struct.SingleTypeSchema {
   collectionName: 'headers';
   info: {
+    description: '';
     displayName: 'Header';
     pluralName: 'headers';
     singularName: 'header';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     contact: Schema.Attribute.Component<'header-logo.contact-header', false>;

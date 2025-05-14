@@ -20,29 +20,21 @@ export interface HeaderLogoLinkHeader extends Struct.ComponentSchema {
     displayName: 'LinkHeader';
   };
   attributes: {
-    enum: Schema.Attribute.Enumeration<
-      [
-        'SERVICES OVERVIEW',
-        'UI/UX DESIGN',
-        'WEB EXPERIENCE',
-        'BRAND STRATEGY',
-        'VIDEO STORYTELLING',
-        'DIGITAL MARKETING',
-      ]
-    >;
     href: Schema.Attribute.String;
     isSelected: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     label: Schema.Attribute.String;
-    linkEnum: Schema.Attribute.Enumeration<
-      [
-        '/servicesoverview',
-        '/uiuxdesign',
-        '/webexperience',
-        '/brandstrategy',
-        '/videostorytelling',
-        '/digitalmarketing',
-      ]
-    >;
+    linkServices: Schema.Attribute.Component<'header-logo.link-services', true>;
+  };
+}
+
+export interface HeaderLogoLinkServices extends Struct.ComponentSchema {
+  collectionName: 'components_header_logo_link_services';
+  info: {
+    displayName: 'linkServices';
+  };
+  attributes: {
+    href: Schema.Attribute.String;
+    label: Schema.Attribute.String;
   };
 }
 
@@ -174,6 +166,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'header-logo.contact-header': HeaderLogoContactHeader;
       'header-logo.link-header': HeaderLogoLinkHeader;
+      'header-logo.link-services': HeaderLogoLinkServices;
       'header-logo.logo': HeaderLogoLogo;
       'header-logo.search-logo': HeaderLogoSearchLogo;
       'shared.link': SharedLink;

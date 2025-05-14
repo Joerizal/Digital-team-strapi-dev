@@ -12,31 +12,14 @@
     "label": {
       "type": "string"
     },
-    "enum": {
-      "type": "enumeration",
-      "enum": [
-        "SERVICES OVERVIEW",
-        "UI/UX DESIGN",
-        "WEB EXPERIENCE",
-        "BRAND STRATEGY",
-        "VIDEO STORYTELLING",
-        "DIGITAL MARKETING"
-      ]
-    },
-    "linkEnum": {
-      "type": "enumeration",
-      "enum": [
-        "/servicesoverview",
-        "/uiuxdesign",
-        "/webexperience",
-        "/brandstrategy",
-        "/videostorytelling",
-        "/digitalmarketing"
-      ]
-    },
     "isSelected": {
       "type": "boolean",
       "default": false
+    },
+    "linkServices": {
+      "type": "component",
+      "repeatable": true,
+      "component": "header-logo.link-services"
     }
   }
 }
