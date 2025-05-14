@@ -4,7 +4,6 @@ import "/assets/styles/main.scss";
 
 <template>
   <div>
-    <AppHeader />
     <div>
       <slot />
     </div>

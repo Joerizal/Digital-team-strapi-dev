@@ -24,21 +24,6 @@ module.exports = (config, { strapi }) => {
         },
       },
     };
-ctx.query.populate = {
-  Logo: {
-    populate: {
-      Image: {
-        fields: ["url", "alternativeText"],
-      },
-    },
-  },
-  Link: {
-    populate: {
-      Links: true,
-    },
-  },
-};
-
 
     await next();
   };

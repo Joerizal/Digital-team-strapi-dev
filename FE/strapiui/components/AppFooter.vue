@@ -66,7 +66,6 @@ const footerBgUrl = computed(() => {
               <h3 class="text-h6 font-weight-bold mb-4">
                 <template v-if="data?.data?.Logo">
                   <v-img
-                    v-for="logo in data.data.Logo"
                     v-if="logo?.Title === 'Seetru Logo'"
                     :key="logo.id"
                     :src="logo.Image?.[0]?.url"
