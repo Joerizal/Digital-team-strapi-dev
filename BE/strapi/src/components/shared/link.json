@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_links",
+  "info": {
+    "displayName": "Link",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Header": {
+      "type": "string"
+    },
+    "isLink": {
+      "type": "boolean",
+      "default": true
+    },
+    "link": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.repeatable-text"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shared_logos",
+  "info": {
+    "displayName": "Logo"
+  },
+  "options": {},
+  "attributes": {
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "isLink": {
+      "type": "boolean",
+      "default": false
+    },
+    "Title": {
+      "type": "string"
+    }
+  }
+}
