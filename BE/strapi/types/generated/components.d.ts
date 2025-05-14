@@ -9,7 +9,7 @@ export interface HeaderLogoContactHeader extends Struct.ComponentSchema {
   attributes: {
     href: Schema.Attribute.String;
     label: Schema.Attribute.String;
-    phoneIcon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    phoneIcon: Schema.Attribute.Media<'images'>;
   };
 }
 
@@ -49,24 +49,24 @@ export interface HeaderLogoLinkHeader extends Struct.ComponentSchema {
 export interface HeaderLogoLogo extends Struct.ComponentSchema {
   collectionName: 'components_header_logo_logos';
   info: {
+    description: '';
     displayName: 'logo';
   };
   attributes: {
     href: Schema.Attribute.String;
     label: Schema.Attribute.String;
-    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    logo: Schema.Attribute.Media<'images'>;
   };
 }
 
 export interface HeaderLogoSearchLogo extends Struct.ComponentSchema {
   collectionName: 'components_header_logo_search_logos';
   info: {
+    description: '';
     displayName: 'SearchLogo';
   };
   attributes: {
-    searchIcon: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
+    searchIcon: Schema.Attribute.Media<'images'>;
   };
 }
 
