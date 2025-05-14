@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_header_logo_contact_headers",
+  "info": {
+    "displayName": "ContactHeader",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "phoneIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "label": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    }
+  }
+}

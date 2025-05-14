@@ -1,5 +1,75 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface HeaderLogoContactHeader extends Struct.ComponentSchema {
+  collectionName: 'components_header_logo_contact_headers';
+  info: {
+    description: '';
+    displayName: 'ContactHeader';
+  };
+  attributes: {
+    href: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+    phoneIcon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface HeaderLogoLinkHeader extends Struct.ComponentSchema {
+  collectionName: 'components_header_logo_link_headers';
+  info: {
+    description: '';
+    displayName: 'LinkHeader';
+  };
+  attributes: {
+    enum: Schema.Attribute.Enumeration<
+      [
+        'SERVICES OVERVIEW',
+        'UI/UX DESIGN',
+        'WEB EXPERIENCE',
+        'BRAND STRATEGY',
+        'VIDEO STORYTELLING',
+        'DIGITAL MARKETING',
+      ]
+    >;
+    href: Schema.Attribute.String;
+    isSelected: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    label: Schema.Attribute.String;
+    linkEnum: Schema.Attribute.Enumeration<
+      [
+        '/servicesoverview',
+        '/uiuxdesign',
+        '/webexperience',
+        '/brandstrategy',
+        '/videostorytelling',
+        '/digitalmarketing',
+      ]
+    >;
+  };
+}
+
+export interface HeaderLogoLogo extends Struct.ComponentSchema {
+  collectionName: 'components_header_logo_logos';
+  info: {
+    displayName: 'logo';
+  };
+  attributes: {
+    href: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface HeaderLogoSearchLogo extends Struct.ComponentSchema {
+  collectionName: 'components_header_logo_search_logos';
+  info: {
+    displayName: 'SearchLogo';
+  };
+  attributes: {
+    searchIcon: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+  };
+}
+
 export interface SharedLink extends Struct.ComponentSchema {
   collectionName: 'components_shared_links';
   info: {
@@ -100,6 +170,10 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'header-logo.contact-header': HeaderLogoContactHeader;
+      'header-logo.link-header': HeaderLogoLinkHeader;
+      'header-logo.logo': HeaderLogoLogo;
+      'header-logo.search-logo': HeaderLogoSearchLogo;
       'shared.link': SharedLink;
       'shared.logo': SharedLogo;
       'shared.media': SharedMedia;

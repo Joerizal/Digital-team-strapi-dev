@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_header_logo_search_logos",
+  "info": {
+    "displayName": "SearchLogo"
+  },
+  "options": {},
+  "attributes": {
+    "searchIcon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
