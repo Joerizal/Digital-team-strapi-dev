@@ -1,5 +1,10 @@
+<script setup lang="ts">
+// Using the default layout
+const layout = "default";
+</script>
+
 <template>
-  <v-container>
-    <v-btn color="primary">Hello Vuetify</v-btn>
-  </v-container>
+  <NuxtLayout :name="layout">
+    <NuxtPage />
+  </NuxtLayout>
 </template>
