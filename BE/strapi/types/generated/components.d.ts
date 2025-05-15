@@ -62,6 +62,30 @@ export interface HeaderLogoSearchLogo extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedButtonLink extends Struct.ComponentSchema {
+  collectionName: 'components_shared_button_links';
+  info: {
+    displayName: 'Button Link';
+  };
+  attributes: {
+    href: Schema.Attribute.String;
+    text: Schema.Attribute.String;
+  };
+}
+
+export interface SharedCardComponent extends Struct.ComponentSchema {
+  collectionName: 'components_shared_card_components';
+  info: {
+    displayName: 'Card Component';
+  };
+  attributes: {
+    backgroundImage1: Schema.Attribute.Component<'shared.media', false>;
+    backgroundImage2: Schema.Attribute.Component<'shared.media', false>;
+    description: Schema.Attribute.Text;
+    Title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedLink extends Struct.ComponentSchema {
   collectionName: 'components_shared_links';
   info: {
@@ -198,6 +222,8 @@ declare module '@strapi/strapi' {
       'header-logo.link-services': HeaderLogoLinkServices;
       'header-logo.logo': HeaderLogoLogo;
       'header-logo.search-logo': HeaderLogoSearchLogo;
+      'shared.button-link': SharedButtonLink;
+      'shared.card-component': SharedCardComponent;
       'shared.link': SharedLink;
       'shared.logo': SharedLogo;
       'shared.media': SharedMedia;

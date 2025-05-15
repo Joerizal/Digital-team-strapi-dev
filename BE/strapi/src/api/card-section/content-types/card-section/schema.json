@@ -1,0 +1,55 @@
+{
+  "kind": "singleType",
+  "collectionName": "card_sections",
+  "info": {
+    "singularName": "card-section",
+    "pluralName": "card-sections",
+    "displayName": "Card Section",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "image1": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.media"
+    },
+    "title1": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.text"
+    },
+    "subTitle1": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.text"
+    },
+    "description": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.text"
+    },
+    "readMore": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.button-link"
+    },
+    "title2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.text"
+    },
+    "subTitle2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.text"
+    },
+    "cardSection1": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.card-component"
+    }
+  }
+}

@@ -502,6 +502,42 @@ export interface ApiBannerBanner extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiCardSectionCardSection extends Struct.SingleTypeSchema {
+  collectionName: 'card_sections';
+  info: {
+    description: '';
+    displayName: 'Card Section';
+    pluralName: 'card-sections';
+    singularName: 'card-section';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    cardSection1: Schema.Attribute.Component<'shared.card-component', true>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Component<'shared.text', false>;
+    image1: Schema.Attribute.Component<'shared.media', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::card-section.card-section'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    readMore: Schema.Attribute.Component<'shared.button-link', false>;
+    subTitle1: Schema.Attribute.Component<'shared.text', false>;
+    subTitle2: Schema.Attribute.Component<'shared.text', false>;
+    title1: Schema.Attribute.Component<'shared.text', false>;
+    title2: Schema.Attribute.Component<'shared.text', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   collectionName: 'categories';
   info: {
@@ -1170,6 +1206,7 @@ declare module '@strapi/strapi' {
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
       'api::banner.banner': ApiBannerBanner;
+      'api::card-section.card-section': ApiCardSectionCardSection;
       'api::category.category': ApiCategoryCategory;
       'api::footer.footer': ApiFooterFooter;
       'api::global.global': ApiGlobalGlobal;

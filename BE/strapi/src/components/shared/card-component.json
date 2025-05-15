@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_card_components",
+  "info": {
+    "displayName": "Card Component"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "backgroundImage1": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.media"
+    },
+    "backgroundImage2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.media"
+    }
+  }
+}
