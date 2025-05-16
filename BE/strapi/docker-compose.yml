@@ -8,7 +8,7 @@ services:
     env_file: .env
     environment:
       DATABASE_CLIENT: ${DATABASE_CLIENT}
-      DATABASE_HOST: db
+      DATABASE_HOST: ${DATABASE_HOST}
       DATABASE_PORT: ${DATABASE_PORT}
       DATABASE_NAME: ${DATABASE_NAME}
       DATABASE_USERNAME: ${DATABASE_USERNAME}
@@ -26,23 +26,23 @@ services:
       - ./public/uploads:/opt/app/public/uploads
     ports:
       - "1337:1337"
-    depends_on:
-      - db
+    # depends_on:
+    #   - db
 
-  db:
-    image: postgres:latest
-    container_name: postgressupabase
-    restart: unless-stopped 
-    env_file: .env
-    environment:
-      POSTGRES_HOST: ${DATABASE_HOSE}
-      POSTGRES_USER: ${DATABASE_USERNAME}
-      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
-      POSTGRES_DB: ${DATABASE_NAME}
-    volumes:
-      - postgressupabase_data:/var/lib/postgresql/data
-    ports: 
-      - "5432:5432"
+#   db:
+#     image: postgres:latest
+#     container_name: postgressupabase
+#     restart: unless-stopped 
+#     env_file: .env
+#     environment:
+#       POSTGRES_HOST: ${DATABASE_HOST}
+#       POSTGRES_USER: ${DATABASE_USERNAME}
+#       POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+#       POSTGRES_DB: ${DATABASE_NAME}
+#     volumes:
+#       - postgressupabase_data:/var/lib/postgresql/data
+#     ports: 
+#       - "5432:5432"
 
-volumes:
-  postgressupabase_data:
+# volumes:
+#   postgressupabase_data:
